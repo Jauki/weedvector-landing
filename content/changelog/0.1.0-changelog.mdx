@@ -1,0 +1,130 @@
+---
+version: "0.1.0"
+date: "2026-05-09"
+summary: "🌱 Beta Release - Foundation Complete"
+---
+
+W2 v0.0.1 is the first beta release of our comprehensive cultivation management system. Built with developers and growers in mind, this release provides the core infrastructure for tracking and optimizing your grow operations.
+
+---
+
+## ✨ Features
+
+### 🌿 Cultivation Management
+- **Environment Tracking**: Create and manage multiple growing spaces (indoor tents, rooms, greenhouses, outdoor plots)
+
+### 📊 Real-Time Sensor Integration
+- **IoT Device Support**: Connect and monitor environmental sensors via MQTT protocol
+- **Live Environmental Data**: Track temperature, humidity, and other critical metrics in real-time
+- **Time-Series Sensor Data**: All readings stored in TimescaleDB for efficient querying and historical analysis
+- **Multi-Device Support**: Manage sensors across multiple environments and grows simultaneously
+
+### 🔐 Authentication & Access Control
+- **User Authentication**: JWT-based authentication with secure token management
+- **Role-Based Access**: Three-tier permission system:
+  - **ADMIN**: Full system access and user management
+  - **GROWER**: Create and manage grows, environments, and plants
+  - **VIEWER**: Read-only access for monitoring
+- **User Registration**: Self-service account creation for grower collaboration
+
+### 🔌 Developer-Friendly Architecture
+- **REST API**: Full OpenAPI/Swagger documentation at `/swagger-ui.html`
+- **Multi-Module Design**: Modular microservices architecture (backend, sensorik, shared)
+- **Message Queue Integration**: RabbitMQ-based communication between services
+- **Database Migrations**: Liquibase-managed schema versioning for reproducible deployments
+
+### 💾 Data Storage & Reliability
+- **PostgreSQL/TimescaleDB**: Enterprise-grade relational database with time-series optimization
+- **S3 Compatible Storage**: MinIO integration for file and image storage
+- **Schema Versioning**: Automated database migrations tracked and versioned
+- **Time-Series Optimization**: Hypertables for efficient sensor data queries at scale
+
+### 📈 Monitoring & Operations
+- **Health Monitoring**: Service health checks and status endpoints
+- **Comprehensive Logging**: Structured logging across all services
+- **Docker Containerization**: Production-ready container configuration with docker-compose
+
+---
+
+## 🛠 Technical Highlights
+
+### Backend Service (Port 8080)
+- Spring Boot REST API with Kotlin
+- Complete CRUD operations for devices, environments and timelapse
+- JWT-secured endpoints with role-based access control
+- Automated OpenAPI documentation
+
+### Sensorik Service (Port 8081)
+- MQTT-to-database bridge for IoT integration
+- Real-time message processing from sensors
+- Bidirectional communication with backend service
+- Priority-based handler system for extensible message processing
+
+### Database Layer
+- TimescaleDB hypertables for efficient sensor data storage
+- Automatic time-based partitioning for large datasets
+- Optimized queries for historical data analysis
+- Support for complex spatial and time-range queries
+
+---
+
+## 🚀 Getting Started
+
+1. **Clone & Setup**: Clone the repository and run `docker-compose up` to start all services
+2. **Create User**: Register at POST `/auth/register` 
+3. **Login**: Authenticate via POST `/auth/login` to receive JWT token
+4. **Create Environment**: Set up your growing space
+5. **Add Devices**: Connect IoT sensors and start collecting data
+
+---
+
+## 📋 What's Included
+
+- ✅ Complete backend REST API with 20+ endpoints
+- ✅ MQTT sensor integration with RabbitMQ messaging
+- ✅ PostgreSQL/TimescaleDB with automated migrations
+- ✅ JWT authentication and RBAC
+- ✅ Frontend UI with responsive design
+- ✅ Docker infrastructure with all services
+- ✅ OpenAPI/Swagger documentation
+- ✅ Comprehensive logging and monitoring hooks
+
+---
+
+## ⚠️ Beta Notes
+
+This is a beta release. While the core features are stable and tested, you may encounter:
+- API changes in future releases
+- Performance optimizations as we scale
+- Enhanced monitoring and analytics features
+
+We recommend running this in development/testing environments before production deployment.
+
+---
+
+## 🔗 Resources
+
+- **API Documentation**: Available at `http://localhost:8080/swagger-ui.html` when running
+- **Docker Compose**: All services configured in `docker-compose.yml`
+- **Database**: TimescaleDB at `localhost:5432` with `weedvector` user
+
+---
+
+## 👥 For Growers
+
+Start tracking your grows immediately:
+1. Create your first environment (tent, room, or greenhouse)
+2. Connect environmental sensors to monitor conditions
+3. Use the dashboard to track progress and optimize future grows
+
+---
+
+## 👨‍💻 For Developers
+
+Build on W2's solid foundation:
+1. Extend the API with custom endpoints
+2. Add new sensor types via the handler system
+3. Build integrations with other tools
+4. Create custom dashboards and analytics
+5. Contribute back improvements and features
+
