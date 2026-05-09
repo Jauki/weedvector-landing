@@ -20,7 +20,7 @@ function figmaAssetResolver() {
 }
 
 export default defineConfig({
-    base: '/weedvector-landing/',
+    base: '/',
   plugins: [
     figmaAssetResolver(),
     { enforce: 'pre', ...mdx({ remarkPlugins: [remarkFrontmatter, remarkMdxFrontmatter] }) },
