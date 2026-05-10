@@ -164,7 +164,7 @@ export function Hero() {
           className="flex flex-col sm:flex-row gap-3 mb-16"
         >
           <a
-            href="https://github.com/jauki/weedvector"
+            href="https://github.com/weedvector/weedvector"
             rel="noopener noreferrer"
             className="flex items-center gap-2 px-6 py-3 rounded-xl transition-all duration-200"
             style={{

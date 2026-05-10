@@ -26,7 +26,7 @@ export function SocialProof() {
           {/* GitHub Stars */}
           <div className="flex items-center gap-4 flex-shrink-0">
             <a
-              href="https://github.com/Jauki/weedvector/"
+              href="https://github.com/weedvector/weedvector"
               className="flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200"
               style={{
                 background: "#0d0d0b",
@@ -37,7 +37,7 @@ export function SocialProof() {
               }}
             >
               <Github size={14} />
-              <span>jauki/weedvector</span>
+              <span>weedvector/weedvector</span>
               <div
                 className="flex items-center gap-1 pl-3 ml-1"
                 style={{ borderLeft: "1px solid rgba(255,255,255,0.07)", color: "#4ade80" }}

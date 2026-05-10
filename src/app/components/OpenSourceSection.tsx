@@ -7,7 +7,7 @@ const TEXT_HEAD = "#f0f0ef";
 const TEXT_BODY = "#8ba083";
 
 const terminalLines = [
-  { prefix: "$", content: "git clone https://github.com/jauki/weedvector", color: "#9aaa94" },
+  { prefix: "$", content: "git clone https://github.com/weedvector/weedvector", color: "#9aaa94" },
   { prefix: "$", content: "cd weedvector", color: "#9aaa94" },
   { prefix: "$", content: "docker compose up", color: "#c0ceb8" },
   { prefix: "✓", content: "TimescaleDB started", color: "#4ade80" },
